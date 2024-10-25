@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/screen.css">
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="shortcut icon" href="./components/images/favicon.png" />
+    <title>Verificação de e-mail</title>
+</head>
+<body>
+    <header class="header_cadastro">
+        <img src = "components/images/logo.png">
+    </header>
+    <main>
+        <form class="login box_esqueceuSenha" id="verificacao"> 
+            <h2>Verificação de e-mail</h2>
+            <p>Digite o código mandado no seu e-mail</p> <a href="#" id="reenviar">Reenviar o código em <a href="#" id="cronometro" onclick="intervaloReenviar()">30</a></a>
+            <input type = "number" placeholder="Código" required>
+            <button type = "submit" class="btnEnviar">Enviar</button>
+            <a href="login.html">Voltar para a tela de login</a>
+            <a href="cadastroGeral.html">Voltar para cadastro</a>
+        </form>
+    </main>
+    <footer>
+        <p>© Copyright by Lucas Almeida de Souza</p>
+    </footer>
+    <script src="./script/script.js"></script>
+</body>
+</html>

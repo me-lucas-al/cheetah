@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/screen.css">
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="shortcut icon" href="./components/images/favicon.png" />
+    <title>Cadastro Monitor</title>
+</head>
+<body>
+    <header class="header_cadastro"> 
+        <img src = "components/images/logo.png">
+    </header>
+
+        <form class = "login box_cadastro" id="form">
+            <h2>Cadastro Monitor</h2>
+            <div class="nomes">
+                <input type = "text" placeholder="Nome"  required>
+                <input type = "text" placeholder="Sobrenome"  required>
+            </div>
+            <input type = "email"placeholder="E-Mail" required>
+            <input type = "tel" placeholder="Telefone" required>
+            <div class="divSenha">
+                <input type = "password" placeholder="Senha" id="senha" required>
+                <img src="/components/images/eye-off.svg" id="iconeSenha">
+            </div>
+            <div class="divSenha">
+                <input type = "password" placeholder="Confirme sua senha" id="confirmarSenha" required>
+                <img src="/components/images/eye-off.svg" id="iconeConfirmarSenha">
+            </div>
+            <input type = "number" placeholder="RG" required min="1000000" max="9999999">
+            <label>Data de nascimento</label>
+            <input type = "date" placeholder="Data de nascimento" required>
+            <label for="genero">Gênero</label>
+            <select id="genero">
+                <option selected disabled>Selecione</option>
+                <option>Feminino</option>
+                <option>Masculino</option>
+                <option>Outro</option>
+            </select>
+
+            <label for="estado">Estado</label>
+                <select id="estado">
+                    <option selected disabled>Selecione</option>
+                </select>
+                <label for="cidade">Cidade</label>
+                <select id="cidade">
+                    <option selected disabled>Selecione</option>
+                </select>
+
+                <label for="formacao">Formação</label>
+                <select id="formacao">
+                    <option>Graduação incompleta</option>
+                    <option>Graduação completa</option>
+                    <option>Pós-graduação incompleta</option>
+                    <option>Pós-graduação completa</option>
+                    <option>Mestrado incompleto</option>
+                    <option>Mestrado completo</option>
+                    <option>Doutorado incompleto</option>
+                    <option>Doutorado completo</option>
+                </select>
+
+                <label>Diploma ou Histórico Acadêmico</label>
+                <div class="divFile">
+                    <input type="file">  
+                </div>
+            
+                <button type = "button" id="btn-proximo" style="margin-top: 30px;" onclick="enviarERedirecionar()">Próximo</button>
+                <div class="links">
+                    <a href="cadastroGeral.html">Voltar para a tela de cadastro</a>
+                    <a href="login.html">Voltar para a tela de login</a>
+                </div>
+        </form>
+            <footer>
+                <p>© Copyright by Lucas Almeida de Souza</p>
+            </footer>
+        <script src="./script/script.js"></script>
+    
+</body>
+</html>

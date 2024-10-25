@@ -1,0 +1,480 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  overflow-x: hidden;
+}
+
+h1 {
+  text-align: center;
+  font-family: "poppinsmedium";
+  color: white;
+}
+
+h2 {
+  margin-top: -10px;
+  text-align: center;
+  font-family: "poppinsbold";
+  font-size: 40px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+  border: none;
+  width: 30%;
+}
+
+header h1 {
+  float: right;
+  margin-left: 20px;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 440px;
+  height: 480px;
+  background-color: white;
+  margin-top: 30px;
+  border: 5px solid white;
+  border-radius: 30px;
+}
+
+.btnEnviar,
+#btn-proximo {
+  width: 150px;
+  height: 20px;
+  font-family: "poppinssemibold";
+  color: white;
+  border-radius: 15px;
+  border: none;
+  background-color: rgb(39, 39, 39);
+  padding: 15px;
+  padding-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.btnEnviar:hover,
+#btn-proximo:hover {
+  cursor: pointer;
+  background-color: rgb(72, 72, 73);
+}
+
+.btnOpcao {
+  width: 150px;
+  height: 20px;
+  font-family: "poppinssemibold";
+  color: white;
+  border-radius: 15px;
+  border: none;
+  background-color: rgb(39, 39, 39);
+  padding: 15px;
+  padding-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.btnOpcao:hover {
+  cursor: pointer;
+  background-color: rgb(72, 72, 73);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"] {
+  width: 200px;
+  height: 20px;
+  padding: 15px;
+  border-radius: 20px;
+  border: 1px solid rgb(7, 7, 62);
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+a {
+  font-family: "poppinslight";
+  font-size: 14px;
+  text-decoration: none;
+  color: rgb(10, 57, 123);
+}
+
+p {
+  font-family: "poppinslight";
+  text-align: center;
+}
+
+.box_esqueceuSenha > input[type="email"] {
+  width: 280px;
+  margin-bottom: 15px;
+}
+
+.box_esqueceuSenha > h2 {
+  font-size: 35px;
+}
+
+.box_esqueceuSenha > a {
+  margin-top: 15px;
+}
+
+.box_esqueceuSenha > p {
+  margin-bottom: 35px;
+}
+
+.header_cadastro {
+  width: 100vw;
+  display: flex;
+}
+
+.header_cadastro > img {
+  width: 440px;
+  height: 120px;
+}
+
+.box_cadastro {
+  position: relative;
+  width: 550px;
+  height: 1050px;
+  padding-bottom: 20px;
+}
+
+label {
+  margin-top: 10px;
+  font-family: "poppinsregular";
+}
+
+.btnCadastro {
+  margin-top: 25px;
+}
+
+h2 {
+  margin-top: 35px;
+}
+
+select {
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid rgb(2, 2, 84);
+}
+
+input[type="file"] {
+  border-radius: 20px;
+  border: 1px blue solid;
+  width: 290px;
+  height: 20px;
+}
+
+.divFile {
+  margin-top: 3px;
+}
+
+footer p {
+  font-family: "poppinslight";
+  color: white;
+  margin-top: 50px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  gap: 20px;
+}
+
+#verificacao {
+  width: 480px;
+}
+
+.divSenha,
+.confirmarSenha {
+  display: flex;
+  margin-left: 30px;
+}
+
+.divSenha img,
+.confirmarSenha img {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#iconeSenha, #iconeConfirmarSenha{
+  width: 10%;
+}
+
+.linksLogin{
+  margin-bottom: 10px;
+}
+#reenviar {
+  margin-top: -10px;
+  margin-bottom: -2px;
+}
+
+#cronometro {
+  margin-bottom: 5px;
+}
+
+ul.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #333;
+  display: flex;
+  width: 100vw;
+}
+
+ul.menu li {
+  flex: 1;
+  text-align: center;
+}
+
+ul.menu li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+ul.menu li a:hover {
+  background-color: #555;
+}
+
+ul.menu li a:active {
+  opacity: 0.6;
+}
+
+#ftUsuario {
+  width: 90px;
+  height: 75px;
+}
+
+.usuario {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 15%;
+}
+
+.nomeUsuario {
+  color: white;
+  font-weight: 600;
+}
+
+.headerCadastroMenu {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  margin-bottom: 15px;
+}
+
+.logo {
+  margin-left: 70px;
+  margin-top: 10px;
+  width: 60px;
+  height: 80px;
+  grid-column: 1 / 2;
+}
+
+.divider {
+  grid-column: 2 / 3;
+  border: 1px solid #ccc;
+}
+
+.usuario {
+  grid-column: 4 / 6;
+  text-align: right;
+  margin-right: 70px;
+}
+
+#ftUsuario:hover,
+.nomeUsuario:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.subtitles {
+  color: white;
+  font-size: 15px;
+}
+
+.subtitles:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.subtitles:active {
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.sub1 {
+  text-decoration: none;
+  margin-left: -30%;
+}
+
+.sub2 {
+  margin-left: 30px;
+  margin-right: 50px;
+}
+
+.pesquisa {
+  margin-top: 30px;
+}
+
+.btnPesquisa {
+  padding: 15px;
+  border-radius: 20px;
+  border: 1px solid rgb(7, 7, 62);
+  margin-top: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.btnPesquisa:hover {
+  opacity: 0.8;
+}
+
+.btnPesquisa:active {
+  opacity: 0.6;
+}
+
+.boxPesquisa,
+.boxForuns {
+  width: 440px;
+  height: auto;
+  background-color: white;
+  margin-top: 30px;
+  border: 5px solid white;
+  border-radius: 30px;
+}
+
+.boxPesquisa > details {
+  margin: 15px;
+}
+
+.boxPesquisa > .first {
+  margin-top: 20px;
+}
+
+.cursos, .local, .campus  {
+  margin-left: 30px;
+  margin-top: 15px;
+}
+
+details:hover {
+  cursor: pointer;
+}
+
+.boxForuns {
+  width: 70vw;
+}
+
+.forumTitle {
+  color: black;
+}
+
+.forumMain {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: "sidebar chat";
+  grid-template-rows: 1fr;
+  border: 1px solid black;
+  margin: 5px;
+  height: 90vh;
+  border-radius: 10px;
+}
+
+.voltarForum {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.btnPosition {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 5px;
+}
+
+#chat {
+  display: grid;
+  grid-area: chat;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.boxMsg {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 15px;
+  height: 70vh;
+}
+
+.btnEnvio {
+  cursor: pointer;
+  color: white;
+  background-color: rgb(7, 33, 112);
+  padding: 15px;
+  margin-top: 8px;
+  border-radius: 15px;
+  height: 50px;
+  margin-left: 10px;
+}
+
+.btnEnvio:hover {
+  background-color: rgb(61, 79, 215);
+}
+
+.sidebar {
+  grid-area: sidebar;
+  border: 1px solid black;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: flex-start;
+  align-items: flex-start;
+  width: 20vw;
+  height: 60vh;
+  overflow-y: auto;
+}
+
+.inputChat {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: -280px;
+}
+
+.message {
+  background-color: #cecacacb;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.message strong {
+  color: #003670;
+}
+
+.own-message {
+  align-self: flex-end;
+  background-color: rgb(136, 213, 232);
+}

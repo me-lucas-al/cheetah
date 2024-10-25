@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/screen.css">
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="shortcut icon" href="./components/images/favicon.png" />
+    <title>Cheetah</title>
+</head>
+
+<body>
+    <header class="headerCadastroMenu"> 
+        <a href="home.html"><img style="cursor: pointer;" class="logo" src="components/images/logoleo.png"></a>
+        <div class="usuario">
+            <a href="login.html" target="_blank"><h2 class="subtitles sub1">Login</h2></a>
+            <a href="cadastroGeral.html" target="_blank"><h2 class="subtitles sub2">Cadastro</h2></a>
+            <img src="./components/images/ex_ftUsuario.jpg" id="ftUsuario">
+            <h4 class="nomeUsuario">Usuario</h4>
+        </div>
+    </header>
+    <ul class="menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="forum.html">Fórum</a></li>
+        <li><a href="itinerario.html">Itinerário</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+    </ul>
+    <main>
+
+        <div class="boxForuns">
+        <h2 class="forumTitle">Fórum de Odontologia - USP</h2>
+        <div class="forumMain">
+            <div class="btnPosition">
+                <button class="btnOpcao" onclick="solicitacaoEntrada()">Solicitar entrada</button>
+            </div>
+                <a href="forum.html"  style="margin-top: -25px" class="voltarForum">Voltar ao fórum principal</a>
+            <form id="chat">
+                <input type="text" name="username" placeholder="Digite seu nome de usuario">
+                <div class="boxMsg">
+                <div class="messages"></div>
+                 <input type="text" name="message" placeholder="Digite sua mensagem" class="inputChat">
+                 <button class="btnEnvio">Enviar</button>
+                </div>
+            
+            </div>
+        
+    </main>
+    <footer>
+        <p>© Copyright by Lucas Almeida de Souza</p>
+    </footer>
+    <script src="./script/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+    <script type="text/javascript">
+        var socket = io("http://localhost:3000");
+
+        function renderMessage(message){
+            var messageClass = message.author === $('input[name=username]').val() ? 'own-message' : '';
+            var messageDiv = $('<div class="message ' + messageClass + '"><strong>' + message.author + '</strong>: ' + message.message + '</div>');
+            $('.messages').append(messageDiv);
+            var messagesContainer = $('.messages')[0];
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
+
+            socket.on("previousMessages", function(messages){
+                for(message of messages){
+                    renderMessage(message);
+                }
+            });
+
+            socket.on("receivedMessage", function(message){
+                renderMessage(message);
+            });
+        $("#chat").submit(function(event){
+            event.preventDefault();
+
+            
+            var author = $('input[name=username]').val();
+            var message = $('input[name=message]').val();
+
+            if(author.length && message.length){
+                var messageObject = {
+                    author: author,
+                    message: message,
+                };
+
+                renderMessage(messageObject);
+
+                socket.emit('sendMessage', messageObject);
+            }
+        });
+
+        
+    </script>
+</body>
+</html>

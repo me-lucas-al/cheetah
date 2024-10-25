@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/screen.css">
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="shortcut icon" href="./components/images/favicon.png" />
+    <title>Login</title>
+</head>
+<body>
+    <header class="header_cadastro"> 
+        <img src = "components/images/logo.png">
+    </header>
+
+    <main>
+    <form class = "login">
+        <h2>Faça o login</h2>
+        <input type = "text" placeholder = "Usuário" required>
+        <div class="divSenha">
+            <input type = "password" placeholder="Senha" id="senha" required>
+            <img src="/components/images/eye-off.svg" id="iconeSenha">
+        </div>
+        <button type = "submit" class="btnEnviar" id="btn-proximo" onclick="enviarERedirecionar()">Enviar</button>
+        <a href="home.html" class="linksLogin">Ir para a home</a>
+        <a href="esqueceu_senha.html" class="linksLogin">Esqueceu a senha?</a>
+        <a href="cadastroGeral.html">Não possui uma conta? Cadastre-se agora</a>
+    </form>
+
+    </main>
+    <footer>
+        <p>© Copyright by Lucas Almeida de Souza</p>
+    </footer>
+    <script>
+        const senhaInput = document.getElementById("senha");
+        const iconeSenha = document.getElementById("iconeSenha");
+
+        iconeSenha.onclick = function() {
+   
+        if (senhaInput.type === "password") {
+            senhaInput.type = "text";
+            iconeSenha.src = "/components/images/eye.svg";
+        } else {
+            senhaInput.type = "password";
+            iconeSenha.src = "/components/images/eye-off.svg";
+
+    }
+}
+    </script>
+    <script src="./script/script.js"></script>
+</body>
+</html>
